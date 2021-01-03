@@ -15,6 +15,10 @@ def about():
 def info():
     return render_template('info.html')
 
+@app.route('/register.html')
+def register():
+    return render_template('register.html')
+
 
 
 

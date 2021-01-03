@@ -1,65 +1,241 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+
+<html>
+  <head>
+     <meta charset="utf-8">
+     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
-    <title>Document</title>
-</head>
-<body>
-    <div class="form-container">
-
-
-        <form class="form">
-            <h1>Login form</h1>
-
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-                
-            <button type="submit"><a href="main.html">Login</a></button>
-            <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
-
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  </head>
+  <body>
+   <div class="bgimg">
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+       <div class="container">
+         <a href="" class="navbar-brand text-warning font-weight-bold">PIYUSH</a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+         <div class="collapse navbar-collapse text-center" id="collapsenavbar">
             
-        </form>
-    </div>
-    <div class="footer-container">
-        <div class="footer">
-            <div class="footer-heading footer-1">
-            <h2>About Us</h2>
-            <a href="#">Blogs</a>
-            <a href="#">Alumini</a>
-            <a href="#">Infrastrucure</a>
-            <a href="#">Facilities</a>
+          <ul class="navbar-nav ml-auto animated slideInDown">
+           <li class="nav-item">
+            <a href="#section1" class="nav-link text-white">SERVICES</a>
+           </li>
+            <li class="nav-item">
+            <a href="#section2" class="nav-link  text-white">PORTFOLIO</a>
+           </li>
+            <li class="nav-item">
+            <a href="#section3" class="nav-link  text-white">ABOUT</a>
+           </li>
+            <li class="nav-item">
+            <a href="#section4" class="nav-link  text-white">TEAM</a>
+           </li>
+            <li class="nav-item">
+            <a href="" class="nav-link  text-white">CONTACT</a>
+           </li>
+           <li class="nav-item">
+            <a href="register.html" class="nav-link  text-white">REGISTER</a>
+           </li>
+          </ul>
+          </div>
+      </div>
+    </nav>
+      <div class="container text-center headerset text-white animated bounceInLeft delay-1s">
+          <h2>WELCOME TO MY BLOG</h2>
+        <h1>PLEASURE TO HAVE YOU HERE</h1>
+        <button class="btn btn-warning text-white btn-lg">SUSCRIBE</button>
+     </div>
+  </div>
+   
+  <!-----now defining the section---->
+  <section class="container ourservices text-center" id="section1">
+        <h1> SERVICES</h1>
+      <p> We offer the following services</p>
+      
+        <div class="row rowsetting" id="section6">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-10 d-block m-auto">
+         <div class="imgsetting d-block m-auto bg-warning"><i class="fa fa-shopping-cart fa-3x text-white"></i></div>
+         <h2>COMPETITVE CODING</h2>
+         <p>snjkvgskhvklsbvhsdjbjjsvknjkdhvjbdjkv
+         kjkjkdsfvkdfnskvklsnvkldfnvkfnkbklfdnkblk</p>
+          </div>
+      
+       <div class="col-lg-4 rowsetting">
+         <div class="imgsetting d-block m-auto bg-warning"><i class="fa fa-desktop fa-3x text-white"></i></div>
+         <h2>RESPONSIVE DESIGN</h2>
+         <p>snjkvgskhvklsbvhsdjbjjsvknjkdhvjbdjkv
+         kjkjkdsfvkdfnskvklsnvkldfnvkfnkbklfdnkblk</p>
+          </div>
+      
+       <div class="col-lg-4 col-md-4 col-sm-4 col-10 d-block m-auto">
+         <div class="imgsetting d-block m-auto bg-warning"><i class="fa fa-desktop fa-3x text-white"></i></div>
+         <h2>MACHINE LEARNING</h2>
+         <p>snjkvgskhvklsbvhsdjbjjsvknjkdhvjbdjkv
+         kjkjkdsfvkdfnskvklsnvkldfnvkfnkbklfdnkblk</p>
+          </div>
+         </div> 
+   </section>
+   
+   <!-----------portpolio------>
+   
+    <section class="portfolio bg-light" id="section2">
+         <div class="container text-center">
+            <h1>PORTFOLIO</h1>
+        <p>sgvsdjvkbshvhjsdhvjkj</p>
+        <div class="row" id="section7">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+              <div class="card">
+                 <img src="{{url_for('static',filename='img/2.png')}}" class="card-img img-fluid">
+               <div class="card-body">
+                  <h2 class="card-title">GOKKU</h2>
+                <p class="card-text">DRAGON BALL Z</p>
+               </div>
+              </div>		 
+          </div>
+           <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+              <div class="card">
+                 <img src="{{url_for('static',filename='img/2.png')}}" class="card-img img-fluid">
+               <div class="card-body">
+                  <h2 class="card-title">GOKKU</h2>
+                <p class="card-text">DRAGON BALL Z</p>
+               </div>
+              </div>		 
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+              <div class="card">
+                 <img src="{{url_for('static',filename='img/2.png')}}" class="card-img img-fluid">
+               <div class="card-body">
+                  <h2 class="card-title">GOKKU</h2>
+                <p class="card-text">DRAGON BALL Z</p>
+               </div>
+              </div>		 
+          </div>
         </div>
-            <div class="footer-heading footer-2">
-            <h2>Contact us</h2>
-            <a href="#">Support</a>
-            <a href="#">Sponsorships</a>
+      
+           <div class="row" id="section8">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+              <div class="card">
+                 <img src="{{url_for('static',filename='img/2.png')}}" class="card-img img-fluid">
+               <div class="card-body">
+                  <h2 class="card-title">GOKKU</h2>
+                <p class="card-text">DRAGON BALL Z</p>
+               </div>
+              </div>		 
+          </div>
+           <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+              <div class="card">
+                 <img src="{{url_for('static',filename='img/2.png')}}" class="card-img img-fluid">
+               <div class="card-body">
+                  <h2 class="card-title">GOKKU</h2>
+                <p class="card-text">DRAGON BALL Z</p>
+               </div>
+              </div>		 
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+              <div class="card">
+                 <img src="{{url_for('static',filename='img/2.png')}}" class="card-img img-fluid">
+               <div class="card-body">
+                  <h2 class="card-title">GOKKU</h2>
+                <p class="card-text">DRAGON BALL Z</p>
+               </div>
+              </div>		 
+          </div>
         </div>
-            <div class="footer-heading footer-3">
-            <h2>Placement records</h2>
-            <a href="#">FANG Record</a>
-            <a href="#">GS</a>
-            <a href="#">Adobe</a>
-            <a href="#">Others</a>
+        
+          </div>
+    </section>
+   <!---------------team---------->
+      <section class="ourteam" id="section4">
+       <div class="container text-center">
+          <h1>OUR TEAM</h1>
+        <p>njshvkbshkdvhkbsdhk</p>
+          
+        <div class="row teamsetting section=11">
+            <div class="col-lg-4 col-md-4 col-sm-10 col-12 d-block m-auto">
+             <figure class="figure">
+               <img src="{{url_for('static',filename='img/6.jpg')}}" class="figure-img img-fluid rounded-circle" height="250px" width="250px">
+                <figcaption>
+                  <h4>rishikesH</H4>
+                <p class="figure-caption">BACKCHOD</p>
+               </figcaption>
+            </figure>
+               
+          </div>
+             <div class="col-lg-4 col-md-4 col-sm-10 col-12 d-block m-auto">
+             <figure class="figure">
+               <img src="{{url_for('static',filename='img/9.jpg')}}" class="figure-img img-fluid rounded-circle" height="250px" width="250px">
+                <figcaption>
+                  <h4>PIYUSH</H4>
+                <p class="figure-caption">LEAD DESIGNER</p>
+               </figcaption>
+            </figure>
+               
+          </div>
+          
+          <div class="col-lg-4 col-md-4 col-sm-10 col-12 d-block m-auto">
+             <figure class="figure">
+               <img src="{{url_for('static',filename='img/7.jpg')}}" class="figure-img img-fluid rounded-circle" height="250px" width="250px">
+                <figcaption>
+                  <h4>PULKIT</H4>
+                <p class="figure-caption">CEO</p>
+               </figcaption>
+            </figure>
+               
+          </div>
         </div>
-            <div class="footer-heading footer-4">
-            <h2>Social Media</h2>
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-        </div>
-        <div class="footer-email-form">
-        <h2>Join our newsletter</h2>
-        <input type="email" placeholder="EnterYour email address"
-         id="footer-email">
-         <input type="submit" value="Sign up" id="footer-email-btn">
-    </div>
+       </div>
+     
+    </section>
+  <!--------------->
+      <footer class="footer">
+         <h6 class="text-center">Copyright 2019 ,Design by PIYUSH DUBEY
+    </footer>
     
-</body>
-</html>
+  <script>
+     $(document).ready(function(){
+     $(window).scroll(function(){
+        var positiontop=$(document).scrollTop();
+      console.log(positiontop);
+      
+       if((positiontop >230) && (positiontop<299))
+       {
+         $("#section1").addClass("animated slideInUp");
+       }
+           
+       if((positiontop >300) && (positiontop<653))
+       {
+         $("#section6").addClass("animated slideInUp");
+       }
+        if((positiontop >705) && (positiontop<940))
+       {
+         $("#section2").addClass("animated slideInUp");
+       }
+          if((positiontop >942) && (positiontop<1175))
+       {
+         $("#section7").addClass("animated slideInUp");
+       }
+         if((positiontop >1176) && (positiontop<1647))
+       {
+         $("#section7").addClass("animated slideInUp");
+       }
+         if((positiontop >1182) && (positiontop<2000))
+       {
+         $("#section4").addClass("animated slideInUp");
+       }
+           if((positiontop >2069) && (positiontop<2304))
+       {
+         $("#section11").addClass("animated slideInUp");
+       }
+     });
+   });
+   
+  </script>	
+    
+   
+   </body>
+   </html>
