@@ -1,1 +1,7 @@
-{% extends "layout.html" %}
+<html>
+    <body>
+        {% for t in TOPIC_DICT["BASICS"] %}
+            <li><a href="{{t[1]}}" >{{t[0]}}</a></li>
+        {% endfor %}
+    </body>
+</html>
