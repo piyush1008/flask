@@ -1,7 +1,15 @@
 <html>
     <body>
+        <h1> PYTHON </h1>
         {% for t in TOPIC_DICT["BASICS"] %}
             <li><a href="{{t[1]}}" >{{t[0]}}</a></li>
         {% endfor %}
+
+        <h1> WEB DEVELOPMENT </h1>
+
+        {% for p in TOPIC_DICT["Web_Dev"] %}
+            <li><a href="{{p[1]}}" >{{p[0]}}</a></li>
+        {% endfor %}
+
     </body>
 </html>
